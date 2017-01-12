@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <title>Elite Car Hires</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox/css/lightbox.css">
 </head>
 
 <body>
@@ -33,11 +34,13 @@
 
         <div id="social">
             <p id="followus">Why Not Follow Us On....</p>
-            <a href="https://en-gb.facebook.com/"><img src="Facebook.png" alt="facebook" /></a>
-            <a href="https://twitter.com/?lang=en"><img src="Twitter.png" alt="twitter" /></a>
-            <a href="https://www.instagram.com/?hl=en"><img src="Instagram.png" alt="instagram" /></a>
+            <a href="https://en-gb.facebook.com/" target="_blank"><img src="Facebook.png" alt="facebook" /></a>
+            <a href="https://twitter.com/?lang=en" target="_blank"><img src="Twitter.png" alt="twitter" /></a>
+            <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="Instagram.png" alt="instagram" /></a>
 
         </div>
+
+        <br>
 
         <div id="slideshow">
 
@@ -71,19 +74,56 @@
                 </p>
             </div>
 
+            <div class="mySlides">
+                <img src="slide6.jpg" alt="car5">
+                <p>Sculptured and sensual, the Huracán’s design is based on the spiky hexagonal forms of the carbon atom, while the seamless roof profile is an unmistakable mark of the Lamborghini DNA. The Huracán is unique even in the dark, thanks to the alluringly “technological” light of its full-LED lighting system. Choose your favourite Lamborghini Huracán and discover its technical specifications.
+                </p>
+            </div>
+
         </div>
     </div>
     <div id="background2">
 
         <h1 class="c_font2">Gallery</h1>
 
+        	<table class="gallery">
+        		<tr>
+        			<td> <a href="slide1.jpg" data-lightbox="gallery" data-title="Nissan GT-R"><img src="g1_tn.jpg" alt="g1"></a> </td>
+        			<td> <a href="slide2.jpg" data-lightbox="gallery" data-title="Audi R8 Spyder"><img src="g2_tn.jpg" alt="g2"></a> </td>
+        			<td> <a href="slide3.jpg" data-lightbox="gallery" data-title="Lamborghini Aventador"><img src="g3_tn.jpg" alt="g3"></a> </td>
+        			<td> <a href="slide4.jpg" data-lightbox="gallery" data-title="BMW M7"><img src="g4_tn.jpg" alt="g4"></a> </td>
+                    <td> <a href="slide5.jpg" data-lightbox="gallery" data-title="Bentley Continental GT"><img src="g5_tn.jpg" alt="g5"></a> </td>
+        		</tr>
+        		<tr>
+        			<td> <a href="slide6.jpg" data-lightbox="gallery" data-title="Lamborghini Huracan"><img src="g6_tn.jpg" alt="g6"></a> </td>
+        			<td> <a href="slide7.jpg" data-lightbox="gallery" data-title="Audi RS3"><img src="g7_tn.jpg" alt="g7"></a> </td>
+	    			<td> <a href="slide8.jpg" data-lightbox="gallery" data-title="Audi RS6"><img src="g8_tn.jpg" alt="g8"></a> </td>
+	    			<td> <a href="slide9.jpg" data-lightbox="gallery" data-title="Porsche Carrera GT"><img src="g9_tn.jpg" alt="g9"></a> </td>
+	    			<td> <a href="slide10.jpg" data-lightbox="gallery" data-title="BMW i8"><img src="g10_tn.jpg" alt="g10"></a> </td>	
+        		</tr>
+        		<tr>
+        		<td> <a href="slide11.jpg" data-lightbox="gallery" data-title="Mercedes C63 AMG"><img src="g11_tn.jpg" alt="g11"></a> </td>
+	    		<td> <a href="slide12.jpg" data-lightbox="gallery" data-title="Porsche Carrera 911"><img src="g12_tn.jpg" alt="g12"></a> </td>
+	    		<td> <a href="slide13.jpg" data-lightbox="gallery" data-title="Audi A7"><img src="g13_tn.jpg" alt="g13"></a> </td>
+	    		<td> <a href="slide14.jpg" data-lightbox="gallery" data-title="Mercedes S63 AMG"><img src="g14_tn.jpg" alt="g14"></a> </td>
+	    		<td> <a href="slide15.jpg" data-lightbox="gallery" data-title="Lamborghini Roadster SV"><img src="g15_tn.jpg" alt="g15"></a> </td>
+        		</tr>
+        	</table>
+    </div>
+    <div id="background3">
+            <h1 class="c_font2">Hire A Car</h1>
+
+    <div id="select_car">
+
+
+    </div>
     </div>
 
     <div id="background4">
         <h1 class="c_font2">Contact Us</h1>
         <form class="contactback">
             <label class="texti">Name</label>
-            <input style="opacity:100;" name="name" placeholder="Type Here">
+            <input name="name" placeholder="Type Here">
 
             <label class="texti">Email</label>
             <input name="email" type="email" placeholder="Type Here">
@@ -129,10 +169,8 @@
             setTimeout(carousel, 4500);
         }
     </script>
-    <!-- java script for welcome message on pop-up -->
-    <script type="text/javascript">
-        alert("Welcome to Elite Hires");
-    </script>
+
+    <script src="lightbox/js/lightbox.js"></script>
 
 </body>
 

@@ -2,6 +2,7 @@ body	{
 	padding: 0;
 	border: 0;
 	margin: 0;
+    overflow: hidden;
 }
 
 p{
@@ -67,6 +68,14 @@ height:100vh;
 
 #background2 {
 background:url(background2.jpg) no-repeat center center fixed;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+height:100vh;
+}
+#background3{
+    background:url(background4.jpg) no-repeat center center fixed;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -147,7 +156,7 @@ input:focus, textarea:focus {
 
 .contactback{
 	background-color: rgba(2,0,0,0.4); 
-	padding:20px;
+	padding:30px;
 }
 .texti{
 	color:white;
@@ -162,15 +171,16 @@ input:focus, textarea:focus {
     margin-left:auto;
     margin-right:auto;
     background-color: rgba(2,0,0,0.4); 
-    padding-left:10px;
-    padding-right:10px;
-    padding-bottom:10px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-bottom:30px;
     color:white;
 
 }
 
 #slideshow img{
     width:100%;
+    
 }
 
 .slideTittle{
@@ -199,3 +209,34 @@ input:focus, textarea:focus {
   -webkit-transform:rotate(360deg);
           transform:rotate(360deg);
 }
+
+.gallery{
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:30px;
+    padding-right:30px;
+    padding-bottom:30px;
+    padding-top:30px;
+    background-color: rgba(2,0,0,0.4);
+}
+
+.gallery img{
+   border:5px solid #021a40;
+}
+
+
+.gallery img:hover {
+    opacity: 0.7;
+}
+
+#select_car{
+        background-color: white;
+        width: 65%;
+        height: 65vh;
+        margin-right: auto;
+        margin-left: auto;
+
+
+}
+
+
