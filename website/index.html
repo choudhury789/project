@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <title>Elite Car Hires</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+    <div id="nav_container">
+        <ul id="nav">
+            <li class="left">
+                <h2 class="c_font">Elite Car Hires</h2>
+            </li>
+            <li class="right"><a href="#background">Home</a>
+            </li>
+            <li class="right"><a href="#background2">Gallery</a>
+            </li>
+            <li class="right"><a href="#background3">Hire</a>
+            </li>
+            <li class="right"><a href="#background4">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div id="background">
+
+        <div id="social">
+            <p id="followus">Why Not Follow Us On....</p>
+            <a href="https://en-gb.facebook.com/"><img src="Facebook.png" alt="facebook" /></a>
+            <a href="https://twitter.com/?lang=en"><img src="Twitter.png" alt="twitter" /></a>
+            <a href="https://www.instagram.com/?hl=en"><img src="Instagram.png" alt="instagram" /></a>
+
+        </div>
+
+        <div id="slideshow">
+
+            <h1 class="slideTittle">Our Top Picks</h1>
+            <div class="mySlides">
+                <img src="slide1.jpg" alt="car1">
+                <p>From a unique competition-developed high-downforce body kit, to a masterfully-tuned suspension, to specially developed high-capacity turbos, the 600 ps GT-R NISMO is pure performance. As NISMO has been the factory racing arm of Nissan for over 30 years, you should expect nothing less.</p>
+            </div>
+
+            <div class="mySlides">
+                <img src="slide2.jpg" alt="car2">
+                <p>Like the R8 coupe, the Spyder comes with Audi’s "Virtual Cockpit," a digital gauge cluster that launched in the TT, but here is fitted in a far more upscale environment. The switches and controls are funky and angular, and we like the materials, which range from classic to futuristic.
+                </p>
+            </div>
+
+            <div class="mySlides">
+                <img src="slide3.jpg" alt="car3">
+                <p>The Aventador Coupé has been engineered to revolutionize this concept and establish a new benchmark in the segment of super sports cars and beyond. This car aims to bring the future forward. This is a true supercar legend in the making, which combines the tradition of the Lamborghini brand with a level of innovation which takes the House of the Raging Bull to hitherto unexplored territory.
+                </p>
+            </div>
+
+            <div class="mySlides">
+                <img src="slide4.jpg" alt="car4">
+                <p>The BMW M6 is the high-performance variant of the German automaker's full-size 6-Series Coupe. It combines corrupting power with a coddling interior, plenty of technology features and sleek, stylish sheetmetal.
+                </p>
+            </div>
+
+            <div class="mySlides">
+                <img src="slide5.jpg" alt="car5">
+                <p>The luxury of spontaneity – the freedom to take to the open road on your own terms. No other car on the road today exempliﬁes the spirit of life’s grand tour more than the Bentley Continental GT.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div id="background2">
+
+        <h1 class="c_font2">Gallery</h1>
+
+    </div>
+
+    <div id="background4">
+        <h1 class="c_font2">Contact Us</h1>
+        <form class="contactback">
+            <label class="texti">Name</label>
+            <input style="opacity:100;" name="name" placeholder="Type Here">
+
+            <label class="texti">Email</label>
+            <input name="email" type="email" placeholder="Type Here">
+
+            <label class="texti">Message</label>
+            <textarea name="message" placeholder="Type Here"></textarea>
+
+            <button class="submit1" name="submit" type="submit">Submit</button>
+
+        </form>
+    </div>
+    <!--java script for smooth scrolling-->
+    <script>
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    </script>
+    <!-- java script for automatic slideshow -->
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4500);
+        }
+    </script>
+    <!-- java script for welcome message on pop-up -->
+    <script type="text/javascript">
+        alert("Welcome to Elite Hires");
+    </script>
+
+</body>
+
+</html>
