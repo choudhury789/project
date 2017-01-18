@@ -10,12 +10,14 @@
     <title>Elite Car Hires</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lightbox/css/lightbox.css">
+
+
 </head>
 
 <body>
 
 
-    <div id="nav_container">
+   <div id="nav_container">
         <ul id="nav">
             <li class="left">
                 <h2 class="c_font">Elite Car Hires</h2>
@@ -27,9 +29,6 @@
             <li class="right"><a href="#background3">Hire</a>
             </li>
             <li class="right"><a href="#background4">Contact Us</a>
-            </li>
-            </li>
-            <li class="right"><a href="#background5">sign up</a>
             </li>
         </ul>
     </div>
@@ -114,12 +113,55 @@
         	</table>
     </div>
     <div id="background3">
+            
             <h1 class="c_font2">Hire A Car</h1>
 
-    <div id="select_car">
+
+            <form method="post" class="hireBack" action="#background3">
+                <h2 class="hireTittle">Send us a request</h2><hr />
+            
+
+                <div class="form-group">
+
+                    <select class="form-control" name="car_model" >
 
 
-    </div>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                <label class="texti">Days to Hire</label>
+                    <select class="form-control"  name="datetohire" style="width:75px;"  >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    </select>
+
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="phone" placeholder="Phone Number" />
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="txt_umail"  placeholder="Email" />
+                </div>
+                <div class="clearfix"></div><hr />
+                <div class="form-group">
+                    <button class="submit1" name="submit" type="submit">Submit</button>
+                </div>
+
+            </form>
+
+
     </div>
 
     <div id="background4">
@@ -137,10 +179,6 @@
             <button class="submit1" name="submit" type="submit">Submit</button>
 
         </form>
-    </div>
-
-    <div id="background5">
-
     </div>
 
     <!--java script for smooth scrolling-->
