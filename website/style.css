@@ -57,7 +57,10 @@ p{
 #nav_container a:hover{
      background-color: #555555;
     color: white;
+    transform: skew(-10deg);
 }
+
+
 
 #nav_container h2{
     padding-left:10px;
