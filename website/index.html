@@ -11,49 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lightbox/css/lightbox.css">
 
-	
-	    <!--java script for smooth scrolling-->
-    <script>
-	$(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                // x[i].style.display = "none";
-                $(".mySlides").addClass('hideit');
-                $(".mySlides").removeClass('showit');
-            }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1
-            }
-            // x[myIndex - 1].style.display = "block";
-            x[myIndex - 1].className += ' showit';
-            // $(".mySlides")[myIndex - 1].addClass('showit');
-            // $(".mySlides")[myIndex - 1].removeClass('hideit');
-            setTimeout(carousel, 4500);
-        }
-	});
-
-		</script>
-
     <script src="lightbox/js/lightbox.js"></script>
-
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -66,7 +25,7 @@
                     <table>
                         <tr>
                             <td>
-                                <img src="logo.png" alt="logo">
+                                <img src="images/logo.png" alt="logo">
                             </td>
                             <td>
                                 <h2 class="c_font">Elite Car Hires</h2>
@@ -88,9 +47,9 @@
 
         <div id="social">
             <p id="followus">Why Not Follow Us On....</p>
-            <a href="https://en-gb.facebook.com/" target="_blank"><img src="Facebook.png" alt="facebook" /></a>
-            <a href="https://twitter.com/?lang=en" target="_blank"><img src="Twitter.png" alt="twitter" /></a>
-            <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="Instagram.png" alt="instagram" /></a>
+            <a href="https://en-gb.facebook.com/" target="_blank"><img src="images/Facebook.png" alt="facebook" /></a>
+            <a href="https://twitter.com/?lang=en" target="_blank"><img src="images/Twitter.png" alt="twitter" /></a>
+            <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="images/Instagram.png" alt="instagram" /></a>
 
         </div>
 
@@ -100,36 +59,36 @@
 
             <h1 class="slideTittle">Our Top Picks</h1>
             <div class="mySlides">
-                <img src="slide1.jpg" alt="car1">
+                <img src="images/slide1.jpg" alt="car1">
                 <p>From a unique competition-developed high-downforce body kit, to a masterfully-tuned suspension, to specially developed high-capacity turbos, the 600 ps GT-R NISMO is pure performance. As NISMO has been the factory racing arm of Nissan for over 30 years, you should expect nothing less.</p>
             </div>
 
             <div class="mySlides">
-                <img src="slide2.jpg" alt="car2">
+                <img src="images/slide2.jpg" alt="car2">
                 <p>Like the R8 coupe, the Spyder comes with Audi’s "Virtual Cockpit," a digital gauge cluster that launched in the TT, but here is fitted in a far more upscale environment. The switches and controls are funky and angular, and we like the materials, which range from classic to futuristic.
                 </p>
             </div>
 
             <div class="mySlides">
-                <img src="slide3.jpg" alt="car3">
+                <img src="images/slide3.jpg" alt="car3">
                 <p>The Aventador Coupé has been engineered to revolutionize this concept and establish a new benchmark in the segment of super sports cars and beyond. This car aims to bring the future forward. This is a true supercar legend in the making, which combines the tradition of the Lamborghini brand with a level of innovation which takes the House of the Raging Bull to hitherto unexplored territory.
                 </p>
             </div>
 
             <div class="mySlides">
-                <img src="slide4.jpg" alt="car4">
+                <img src="images/slide4.jpg" alt="car4">
                 <p>The BMW M6 is the high-performance variant of the German automaker's full-size 6-Series Coupe. It combines corrupting power with a coddling interior, plenty of technology features and sleek, stylish sheetmetal.
                 </p>
             </div>
 
             <div class="mySlides">
-                <img src="slide5.jpg" alt="car5">
+                <img src="images/slide5.jpg" alt="car5">
                 <p>The luxury of spontaneity – the freedom to take to the open road on your own terms. No other car on the road today exempliﬁes the spirit of life’s grand tour more than the Bentley Continental GT.
                 </p>
             </div>
 
             <div class="mySlides">
-                <img src="slide6.jpg" alt="car5">
+                <img src="images/slide6.jpg" alt="car5">
                 <p>Sculptured and sensual, the Huracán’s design is based on the spiky hexagonal forms of the carbon atom, while the seamless roof profile is an unmistakable mark of the Lamborghini DNA. The Huracán is unique even in the dark, thanks to the alluringly “technological” light of its full-LED lighting system. Choose your favourite Lamborghini Huracán and discover its technical specifications.
                 </p>
             </div>
@@ -143,53 +102,53 @@
         <table class="gallery">
             <tr>
                 <td>
-                    <a href="slide1.jpg" data-lightbox="gallery" data-title="Nissan GT-R"><img src="g1_tn.jpg" alt="g1"></a>
+                    <a href="slide1.jpg" data-lightbox="gallery" data-title="Nissan GT-R"><img src="images/g1_tn.jpg" alt="g1"></a>
                 </td>
                 <td>
-                    <a href="slide2.jpg" data-lightbox="gallery" data-title="Audi R8 Spyder"><img src="g2_tn.jpg" alt="g2"></a>
+                    <a href="slide2.jpg" data-lightbox="gallery" data-title="Audi R8 Spyder"><img src="images/g2_tn.jpg" alt="g2"></a>
                 </td>
                 <td>
-                    <a href="slide3.jpg" data-lightbox="gallery" data-title="Lamborghini Aventador"><img src="g3_tn.jpg" alt="g3"></a>
+                    <a href="slide3.jpg" data-lightbox="gallery" data-title="Lamborghini Aventador"><img src="images/g3_tn.jpg" alt="g3"></a>
                 </td>
                 <td>
-                    <a href="slide4.jpg" data-lightbox="gallery" data-title="BMW M7"><img src="g4_tn.jpg" alt="g4"></a>
+                    <a href="slide4.jpg" data-lightbox="gallery" data-title="BMW M7"><img src="images/g4_tn.jpg" alt="g4"></a>
                 </td>
                 <td>
-                    <a href="slide5.jpg" data-lightbox="gallery" data-title="Bentley Continental GT"><img src="g5_tn.jpg" alt="g5"></a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="slide6.jpg" data-lightbox="gallery" data-title="Lamborghini Huracan"><img src="g6_tn.jpg" alt="g6"></a>
-                </td>
-                <td>
-                    <a href="slide7.jpg" data-lightbox="gallery" data-title="Audi RS3"><img src="g7_tn.jpg" alt="g7"></a>
-                </td>
-                <td>
-                    <a href="slide8.jpg" data-lightbox="gallery" data-title="Audi RS6"><img src="g8_tn.jpg" alt="g8"></a>
-                </td>
-                <td>
-                    <a href="slide9.jpg" data-lightbox="gallery" data-title="Porsche Carrera GT"><img src="g9_tn.jpg" alt="g9"></a>
-                </td>
-                <td>
-                    <a href="slide10.jpg" data-lightbox="gallery" data-title="BMW i8"><img src="g10_tn.jpg" alt="g10"></a>
+                    <a href="slide5.jpg" data-lightbox="gallery" data-title="Bentley Continental GT"><img src="images/g5_tn.jpg" alt="g5"></a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href="slide11.jpg" data-lightbox="gallery" data-title="Mercedes C63 AMG"><img src="g11_tn.jpg" alt="g11"></a>
+                    <a href="slide6.jpg" data-lightbox="gallery" data-title="Lamborghini Huracan"><img src="images/g6_tn.jpg" alt="g6"></a>
                 </td>
                 <td>
-                    <a href="slide12.jpg" data-lightbox="gallery" data-title="Porsche Carrera 911"><img src="g12_tn.jpg" alt="g12"></a>
+                    <a href="slide7.jpg" data-lightbox="gallery" data-title="Audi RS3"><img src="images/g7_tn.jpg" alt="g7"></a>
                 </td>
                 <td>
-                    <a href="slide13.jpg" data-lightbox="gallery" data-title="Audi A7"><img src="g13_tn.jpg" alt="g13"></a>
+                    <a href="slide8.jpg" data-lightbox="gallery" data-title="Audi RS6"><img src="images/g8_tn.jpg" alt="g8"></a>
                 </td>
                 <td>
-                    <a href="slide14.jpg" data-lightbox="gallery" data-title="Mercedes S63 AMG"><img src="g14_tn.jpg" alt="g14"></a>
+                    <a href="slide9.jpg" data-lightbox="gallery" data-title="Porsche Carrera GT"><img src="images/g9_tn.jpg" alt="g9"></a>
                 </td>
                 <td>
-                    <a href="slide15.jpg" data-lightbox="gallery" data-title="Lamborghini Roadster SV"><img src="g15_tn.jpg" alt="g15"></a>
+                    <a href="slide10.jpg" data-lightbox="gallery" data-title="BMW i8"><img src="images/g10_tn.jpg" alt="g10"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="slide11.jpg" data-lightbox="gallery" data-title="Mercedes C63 AMG"><img src="images/g11_tn.jpg" alt="g11"></a>
+                </td>
+                <td>
+                    <a href="slide12.jpg" data-lightbox="gallery" data-title="Porsche Carrera 911"><img src="images/g12_tn.jpg" alt="g12"></a>
+                </td>
+                <td>
+                    <a href="slide13.jpg" data-lightbox="gallery" data-title="Audi A7"><img src="images/g13_tn.jpg" alt="g13"></a>
+                </td>
+                <td>
+                    <a href="slide14.jpg" data-lightbox="gallery" data-title="Mercedes S63 AMG"><img src="images/g14_tn.jpg" alt="g14"></a>
+                </td>
+                <td>
+                    <a href="slide15.jpg" data-lightbox="gallery" data-title="Lamborghini Roadster SV"><img src="images/g15_tn.jpg" alt="g15"></a>
                 </td>
             </tr>
         </table>
@@ -217,7 +176,7 @@
 
         <div class="aboutback">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet erat quis arcu faucibus pulvinar id id tortor. Nulla facilisi. <img class="logo_img" src="logo.png" alt="logo2">Sed rhoncus pharetra erat, quis fringilla erat molestie ac. Etiam nec porta massa, vitae pellentesque sapien. Duis et erat ac mi lacinia vestibulum. Aenean imperdiet magna at mauris vestibulum, nec sagittis est suscipit. Maecenas porttitor, sem eu tempus eleifend, ligula velit luctus ipsum, nec fermentum lectus justo in ipsum. Fusce egestas pharetra vestibulum. Vestibulum sagittis magna id orci iaculis congue. Morbi bibendum urna sollicitudin, molestie elit sit amet, imperdiet turpis. Proin suscipit erat sit amet ultrices lobortis. Sed facilisis varius mattis. Mauris erat ligula, varius vel sollicitudin id, lacinia a tortor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet erat quis arcu faucibus pulvinar id id tortor. Nulla facilisi. <img class="logo_img" src="images/logo.png" alt="logo2">Sed rhoncus pharetra erat, quis fringilla erat molestie ac. Etiam nec porta massa, vitae pellentesque sapien. Duis et erat ac mi lacinia vestibulum. Aenean imperdiet magna at mauris vestibulum, nec sagittis est suscipit. Maecenas porttitor, sem eu tempus eleifend, ligula velit luctus ipsum, nec fermentum lectus justo in ipsum. Fusce egestas pharetra vestibulum. Vestibulum sagittis magna id orci iaculis congue. Morbi bibendum urna sollicitudin, molestie elit sit amet, imperdiet turpis. Proin suscipit erat sit amet ultrices lobortis. Sed facilisis varius mattis. Mauris erat ligula, varius vel sollicitudin id, lacinia a tortor.</p>
 
             <div id="googlemap">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2421.676864217801!2d-1.1408561!3d52.6296833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879ddcfc377f7cd%3A0xd91c9efcc41fdd79!2sDe+Montfort+University+uk!5e0!3m2!1sen!2suk!4v1484925626914" allowfullscreen></iframe>
@@ -225,7 +184,9 @@
 
         </div>
 
+
     </div>
+
 
 </body>
 

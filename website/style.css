@@ -85,7 +85,7 @@ p{
 }
 
 #background {
-background:url(background1.jpg) no-repeat center center fixed;
+background:url(images/background1.jpg) no-repeat center center fixed;
 -webkit-background-size:covefont-family: 'Ranga', cursive;r;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -94,7 +94,7 @@ height:100vh;
 }
 
 #background2 {
-background:url(background2.jpg) no-repeat center center fixed;
+background:url(images/background2.jpg) no-repeat center center fixed;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -102,7 +102,7 @@ background-size:cover;
 height:100vh;
 }
 #background3{
-background:url(background4.jpg) no-repeat center center fixed;
+background:url(images/background4.jpg) no-repeat center center fixed;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -112,7 +112,7 @@ height:100vh;
 }
 
 #background4 {
-background:url(background4.jpg) no-repeat center center fixed;
+background:url(images/background4.jpg) no-repeat center center fixed;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -121,7 +121,7 @@ height:100vh;
 }
 
 #contactbackground{
-background:url(contactbackground.jpg) no-repeat center center fixed;
+background:url(images/contactbackground.jpg) no-repeat center center fixed;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -130,7 +130,7 @@ height:100vh;
 }
 
 #background5 {
-background:url(background5.jpg) no-repeat center center fixed;
+background:url(images/background5.jpg) no-repeat center center fixed;
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -309,14 +309,12 @@ input:focus, textarea:focus {
 }
 
 
-/* issue fixes - #FO287968F085 */
 #followus {
 margin: 0 auto;
 padding: 1rem;
 }
 
 
-/* slider smooth transition */
 #slideshow {
 position: relative;
 }
