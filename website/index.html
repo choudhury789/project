@@ -10,27 +10,69 @@
     <title>Elite Car Hires</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lightbox/css/lightbox.css">
-    
+
+	
+	    <!--java script for smooth scrolling-->
+    <script>
+	$(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                // x[i].style.display = "none";
+                $(".mySlides").addClass('hideit');
+                $(".mySlides").removeClass('showit');
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            // x[myIndex - 1].style.display = "block";
+            x[myIndex - 1].className += ' showit';
+            // $(".mySlides")[myIndex - 1].addClass('showit');
+            // $(".mySlides")[myIndex - 1].removeClass('hideit');
+            setTimeout(carousel, 4500);
+        }
+	});
+
+		</script>
+
+    <script src="lightbox/js/lightbox.js"></script>
+
 </head>
 
 <body>
 
 
-   <div id="nav_container">
+    <div id="nav_container">
         <ul id="nav">
             <li class="left">
-            	<div id="nav_logo">
-            	<table>
-            	<tr>
-            	<td>
-            	<img src="logo.png" alt="logo">
-            	</td>
-            	<td>
-            	 <h2 class="c_font">Elite Car Hires</h2>
-            	 </td>
-
-            	 </table>
-            	</div>
+                <div id="nav_logo">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="logo.png" alt="logo">
+                            </td>
+                            <td>
+                                <h2 class="c_font">Elite Car Hires</h2>
+                            </td>
+                    </table>
+                </div>
             </li>
             <li class="right"><a href="#background">Home</a>
             </li>
@@ -91,36 +133,66 @@
                 <p>Sculptured and sensual, the Huracán’s design is based on the spiky hexagonal forms of the carbon atom, while the seamless roof profile is an unmistakable mark of the Lamborghini DNA. The Huracán is unique even in the dark, thanks to the alluringly “technological” light of its full-LED lighting system. Choose your favourite Lamborghini Huracán and discover its technical specifications.
                 </p>
             </div>
-
+            
         </div>
     </div>
     <div id="background2">
 
         <h1 class="c_font2">Gallery</h1>
 
-        	<table class="gallery">
-        		<tr>
-        			<td> <a href="slide1.jpg" data-lightbox="gallery" data-title="Nissan GT-R"><img src="g1_tn.jpg" alt="g1"></a> </td>
-        			<td> <a href="slide2.jpg" data-lightbox="gallery" data-title="Audi R8 Spyder"><img src="g2_tn.jpg" alt="g2"></a> </td>
-        			<td> <a href="slide3.jpg" data-lightbox="gallery" data-title="Lamborghini Aventador"><img src="g3_tn.jpg" alt="g3"></a> </td>
-        			<td> <a href="slide4.jpg" data-lightbox="gallery" data-title="BMW M7"><img src="g4_tn.jpg" alt="g4"></a> </td>
-                    <td> <a href="slide5.jpg" data-lightbox="gallery" data-title="Bentley Continental GT"><img src="g5_tn.jpg" alt="g5"></a> </td>
-        		</tr>
-        		<tr>
-        			<td> <a href="slide6.jpg" data-lightbox="gallery" data-title="Lamborghini Huracan"><img src="g6_tn.jpg" alt="g6"></a> </td>
-        			<td> <a href="slide7.jpg" data-lightbox="gallery" data-title="Audi RS3"><img src="g7_tn.jpg" alt="g7"></a> </td>
-	    			<td> <a href="slide8.jpg" data-lightbox="gallery" data-title="Audi RS6"><img src="g8_tn.jpg" alt="g8"></a> </td>
-	    			<td> <a href="slide9.jpg" data-lightbox="gallery" data-title="Porsche Carrera GT"><img src="g9_tn.jpg" alt="g9"></a> </td>
-	    			<td> <a href="slide10.jpg" data-lightbox="gallery" data-title="BMW i8"><img src="g10_tn.jpg" alt="g10"></a> </td>	
-        		</tr>
-        		<tr>
-        		<td> <a href="slide11.jpg" data-lightbox="gallery" data-title="Mercedes C63 AMG"><img src="g11_tn.jpg" alt="g11"></a> </td>
-	    		<td> <a href="slide12.jpg" data-lightbox="gallery" data-title="Porsche Carrera 911"><img src="g12_tn.jpg" alt="g12"></a> </td>
-	    		<td> <a href="slide13.jpg" data-lightbox="gallery" data-title="Audi A7"><img src="g13_tn.jpg" alt="g13"></a> </td>
-	    		<td> <a href="slide14.jpg" data-lightbox="gallery" data-title="Mercedes S63 AMG"><img src="g14_tn.jpg" alt="g14"></a> </td>
-	    		<td> <a href="slide15.jpg" data-lightbox="gallery" data-title="Lamborghini Roadster SV"><img src="g15_tn.jpg" alt="g15"></a> </td>
-        		</tr>
-        	</table>
+        <table class="gallery">
+            <tr>
+                <td>
+                    <a href="slide1.jpg" data-lightbox="gallery" data-title="Nissan GT-R"><img src="g1_tn.jpg" alt="g1"></a>
+                </td>
+                <td>
+                    <a href="slide2.jpg" data-lightbox="gallery" data-title="Audi R8 Spyder"><img src="g2_tn.jpg" alt="g2"></a>
+                </td>
+                <td>
+                    <a href="slide3.jpg" data-lightbox="gallery" data-title="Lamborghini Aventador"><img src="g3_tn.jpg" alt="g3"></a>
+                </td>
+                <td>
+                    <a href="slide4.jpg" data-lightbox="gallery" data-title="BMW M7"><img src="g4_tn.jpg" alt="g4"></a>
+                </td>
+                <td>
+                    <a href="slide5.jpg" data-lightbox="gallery" data-title="Bentley Continental GT"><img src="g5_tn.jpg" alt="g5"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="slide6.jpg" data-lightbox="gallery" data-title="Lamborghini Huracan"><img src="g6_tn.jpg" alt="g6"></a>
+                </td>
+                <td>
+                    <a href="slide7.jpg" data-lightbox="gallery" data-title="Audi RS3"><img src="g7_tn.jpg" alt="g7"></a>
+                </td>
+                <td>
+                    <a href="slide8.jpg" data-lightbox="gallery" data-title="Audi RS6"><img src="g8_tn.jpg" alt="g8"></a>
+                </td>
+                <td>
+                    <a href="slide9.jpg" data-lightbox="gallery" data-title="Porsche Carrera GT"><img src="g9_tn.jpg" alt="g9"></a>
+                </td>
+                <td>
+                    <a href="slide10.jpg" data-lightbox="gallery" data-title="BMW i8"><img src="g10_tn.jpg" alt="g10"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="slide11.jpg" data-lightbox="gallery" data-title="Mercedes C63 AMG"><img src="g11_tn.jpg" alt="g11"></a>
+                </td>
+                <td>
+                    <a href="slide12.jpg" data-lightbox="gallery" data-title="Porsche Carrera 911"><img src="g12_tn.jpg" alt="g12"></a>
+                </td>
+                <td>
+                    <a href="slide13.jpg" data-lightbox="gallery" data-title="Audi A7"><img src="g13_tn.jpg" alt="g13"></a>
+                </td>
+                <td>
+                    <a href="slide14.jpg" data-lightbox="gallery" data-title="Mercedes S63 AMG"><img src="g14_tn.jpg" alt="g14"></a>
+                </td>
+                <td>
+                    <a href="slide15.jpg" data-lightbox="gallery" data-title="Lamborghini Roadster SV"><img src="g15_tn.jpg" alt="g15"></a>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div id="background4">
@@ -141,55 +213,19 @@
     </div>
 
     <div id="background5">
-            <h1 class="c_font2">About Us</h1>
+        <h1 class="c_font2">About Us</h1>
 
-            <div class="aboutback">
+        <div class="aboutback">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet erat quis arcu faucibus pulvinar id id tortor. Nulla facilisi. Sed rhoncus pharetra erat, quis fringilla erat molestie ac. Etiam nec porta massa, vitae pellentesque sapien. Duis et erat ac mi lacinia vestibulum. Aenean imperdiet magna at mauris vestibulum, nec sagittis est suscipit. Maecenas porttitor, sem eu tempus eleifend, ligula velit luctus ipsum, nec fermentum lectus justo in ipsum. Fusce egestas pharetra vestibulum. Vestibulum sagittis magna id orci iaculis congue. Morbi bibendum urna sollicitudin, molestie elit sit amet, imperdiet turpis. Proin suscipit erat sit amet ultrices lobortis. Sed facilisis varius mattis. Mauris erat ligula, varius vel sollicitudin id, lacinia a tortor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet erat quis arcu faucibus pulvinar id id tortor. Nulla facilisi. <img class="logo_img" src="logo.png" alt="logo2">Sed rhoncus pharetra erat, quis fringilla erat molestie ac. Etiam nec porta massa, vitae pellentesque sapien. Duis et erat ac mi lacinia vestibulum. Aenean imperdiet magna at mauris vestibulum, nec sagittis est suscipit. Maecenas porttitor, sem eu tempus eleifend, ligula velit luctus ipsum, nec fermentum lectus justo in ipsum. Fusce egestas pharetra vestibulum. Vestibulum sagittis magna id orci iaculis congue. Morbi bibendum urna sollicitudin, molestie elit sit amet, imperdiet turpis. Proin suscipit erat sit amet ultrices lobortis. Sed facilisis varius mattis. Mauris erat ligula, varius vel sollicitudin id, lacinia a tortor.</p>
 
             <div id="googlemap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2421.676864217801!2d-1.1408561!3d52.6296833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879ddcfc377f7cd%3A0xd91c9efcc41fdd79!2sDe+Montfort+University+uk!5e0!3m2!1sen!2suk!4v1484925626914" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2421.676864217801!2d-1.1408561!3d52.6296833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879ddcfc377f7cd%3A0xd91c9efcc41fdd79!2sDe+Montfort+University+uk!5e0!3m2!1sen!2suk!4v1484925626914" allowfullscreen></iframe>
             </div>
 
+        </div>
 
     </div>
-
-    <!--java script for smooth scrolling-->
-    <script>
-        $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    </script>
-    <!-- java script for automatic slideshow -->
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1
-            }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 4500);
-        }
-    </script>
-
-    <script src="lightbox/js/lightbox.js"></script>
 
 </body>
 

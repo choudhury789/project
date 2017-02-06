@@ -35,9 +35,9 @@ p{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:rgba(0,229,255,0.2);
+    background-color:rgba(0,229,255,0.4);
     position: fixed;
-    top: 0;
+    top:0;
     width: 100%;
 }
 
@@ -293,7 +293,49 @@ input:focus, textarea:focus {
 
 #nav_logo img{
     width:15%;
-    
-    
+     -ms-transform: rotate(-90deg); 
+    -webkit-transform: rotate(-90deg); 
+    transform: rotate(-90deg); 
+    padding:0;
+    margin:0;
 }
 
+.logo_img{
+    float:right;
+    width:30%;
+    -ms-transform: rotate(-90deg); 
+    -webkit-transform: rotate(-90deg); 
+    transform: rotate(-90deg);   
+}
+
+
+/* issue fixes - #FO287968F085 */
+#followus {
+margin: 0 auto;
+padding: 1rem;
+}
+
+
+/* slider smooth transition */
+#slideshow {
+position: relative;
+}
+
+.mySlides.hideit {
+opacity: 0;
+visibility: hidden;
+transition: all .5s;
+position: absolute;
+max-width: 100%;
+left: 0;
+right: 0;
+top: 100%;
+background: rgba(2,0,0,.4);
+padding: 1rem;
+}
+
+.mySlides.hideit.showit {
+opacity: 1;
+visibility: visible;
+display: block;
+}
