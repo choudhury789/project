@@ -34,16 +34,3 @@ $(function() {
         setTimeout(carousel, 4500);
     }
 });
-
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-
-document.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-}, false);
