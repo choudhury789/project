@@ -43,3 +43,7 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, false);
